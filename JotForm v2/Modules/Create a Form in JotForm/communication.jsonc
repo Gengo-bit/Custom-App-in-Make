@@ -1,16 +1,16 @@
 {
-    "url": "/form?apiKey={{connection.apiKey}}",
-    "method": "POST",
-    "headers": {
-      "Content-Type": "application/x-www-form-urlencoded"
-    },
-    "body": "&questions[1][type]={{parameters.questions[1].questionType}}&questions[1][text]={{parameters.questions[1].questionLabel}}&questions[1][required]={{parameters.questions[1].isRequired}}&questions[2][type]=control_button&questions[2][text]=Submit&properties[title]=Test Form&properties[height]=600&",
-    "response": {
-      "output": "{{body}}"
-    },
-    "log": {
-      "sanitize": [
-        "url"
-      ]
-    }
+  "url": "/form?apiKey={{connection.apiKey}}",
+  "method": "POST",
+  "headers": {
+    "Content-Type": "application/x-www-form-urlencoded"
+  },
+  "body": "&questions[1][type]={{parameters.questions[1].questionType}}&questions[1][text]={{parameters.questions[1].questionLabel}}&questions[1][required]={{parameters.questions[1].isRequired}}&questions[2][type]={{parameters.questions[2].questionType}}&questions[2][text]={{parameters.questions[2].questionLabel}}&questions[2][required]={{parameters.questions[2].isRequired}}&questions[3][type]=control_button&questions[3][text]=Submit&properties[title]={{parameters.formTitle}}&properties[height]=600&",
+  "response": {
+    "output": "{{body}}"
+  },
+  "log": {
+    "sanitize": [
+      "url"
+    ]
   }
+}
