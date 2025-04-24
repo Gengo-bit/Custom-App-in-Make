@@ -1,0 +1,14 @@
+[
+    {
+      "name": "formTitle", 
+      "type": "text",  
+      "required": true,
+      "label": "Form Title" 
+    },
+    {
+      "name": "questions",  
+      "type": "json", 
+      "required": true,  
+      "label": "Questions" 
+    }
+  ]

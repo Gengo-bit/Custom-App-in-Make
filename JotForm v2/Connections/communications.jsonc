@@ -1,0 +1,21 @@
+{
+    "url": "https://api.jotform.com/user",
+    "qs": {
+      "apiKey": "{{parameters.apiKey}}"
+    },
+    "response": {
+      "metadata": {
+        "type": "email",
+        "value": "{{body.content.email}}"
+      },
+      "error": {
+        "message": "[{{statusCode}}] {{body.message}}"
+      }
+    },
+    "log": {
+      "sanitize": [
+        "request.qs.apiKey"
+      ]
+    }
+  }
+  

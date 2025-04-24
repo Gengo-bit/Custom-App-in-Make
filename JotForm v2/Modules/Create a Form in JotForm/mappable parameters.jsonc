@@ -1,0 +1,75 @@
+[
+    {
+      "name": "formTitle",
+      "type": "text",
+      "required": true,
+      "label": "Form Title"
+    },
+    {
+      "name": "formHeight",
+      "type": "number",
+      "required": true,
+      "label": "Form Height"
+    },
+    {
+      "name": "questions",
+      "type": "array",
+      "required": true,
+      "label": "Questions",
+      "spec": [
+        {
+          "name": "questionLabel",
+          "type": "text",
+          "label": "Question Label"
+        },
+        {
+          "name": "questionType",
+          "type": "select",
+          "label": "Question Type",
+          "options": {
+            "store": [
+              {
+                "label": "Full Name",
+                "value": "control_fullname"
+              },
+              {
+                "label": "Email",
+                "value": "control_email"
+              },
+              {
+                "label": "Date & Time",
+                "value": "control_datetime"
+              },
+              {
+                "label": "Time",
+                "value": "control_time"
+              },
+              {
+                "label": "Submit Button",
+                "value": "control_button"
+              }
+            ],
+            "placeholder": "Select the type of Question"
+          }
+        },
+        {
+          "name": "isRequired",
+          "type": "select",
+          "label": "Is this question required?",
+          "options": {
+            "store": [
+              {
+                "label": "Yes",
+                "value": "Yes"
+              },
+              {
+                "label": "No",
+                "value": "No"
+              }
+            ],
+            "placeholder": "Yes or No?"
+          }
+        }
+      ]
+    }
+  ]

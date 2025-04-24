@@ -1,0 +1,23 @@
+{
+    "baseUrl": "https://api.jotform.com",  
+    "headers": {
+      "Content-Type": "application/x-www-form-urlencoded"  
+    },
+    "qs": {
+      "Authorization": "Bearer {{connection.apiKey}}"  
+    },
+    "response": {
+      "metadata": { 
+        "type": "email",  
+        "value": "{{body.email}}"  
+      },
+      "error": {
+        "message": "[{{statusCode}}] {{body.message}}"  
+      }
+    },
+    "log": {
+      "sanitize": [
+        "request.qs.Authorization" 
+      ]
+    }
+  }
