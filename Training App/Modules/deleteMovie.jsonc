@@ -1,0 +1,10 @@
+{
+	// Request to API endpoint with parameter "id" defined in Mappable parameters.
+	"url": "/movies/{{parameters.id}}",      // Relative to base URL
+	"method": "DELETE",
+
+	// Response handling
+	"response": {
+		"output": "{{body}}"                // Return JSON response body as an output bundle.
+	}
+}

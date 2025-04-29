@@ -1,0 +1,14 @@
+{
+	// Request to API endpoint with parameter "id" defined in Mappable parameters.
+	"url": "/helloworld",      // Relative to base URL
+	"method": "GET",
+	"qs": {
+		"name": "{{parameters.name}}",
+		"greeting" : "{{parameters.greeting}}"
+	},                               // Query string
+
+	// Response handling
+	"response": {
+		"output": "{{body}}"                // Return JSON response body as an output bundle.
+	}
+}

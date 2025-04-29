@@ -1,0 +1,21 @@
+{
+	// Request to API endpoint with parameter "id" defined in Mappable parameters.
+	"url": "/movies",      // Relative to base URL
+	"method": "POST",
+	"body": {
+		"{{...}}":"{{omit(parameters,'premieres','releaseDate')}}",
+		"premieres":{
+			"czechPremiere":"{{formatDate(parameters.premieres.czechPremiere,'YYYY-MM-DDThh:mm:ssZ')}}",
+			"originalPremiere":"{{formatDate(parameters.premieres.originalPremiere,'YYYY-MM-DDThh:mm:ssZ')}}"
+		},
+		"releaseDate": "{{formatDate(parameters.releaseDate,'YYYY')}}"
+	},
+
+	// Response handling
+	"response": {
+		"output": {
+			"{{...}}":"{{omit(body,'createdAt')}}",
+			"createdAt":"{{parseDate(body.createdAt,'YYYY-MM-DDThh:mm:ssZ')}}"
+		}
+	}
+}

@@ -1,0 +1,10 @@
+{
+	// Request to API endpoint with parameter "id" defined in Mappable parameters.
+	"url": "/about",      // Relative to base URL
+	"method": "GET",
+
+	// Response handling
+	"response": {
+		"output": "{{body}}"                // Return JSON response body as an output bundle.
+	}
+}

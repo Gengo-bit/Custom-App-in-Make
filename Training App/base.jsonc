@@ -1,0 +1,22 @@
+{
+	// Default request configuration
+	"baseUrl": "https://app-academy.make.com/api/v1",          // Default base URL for all modules and RPCs.
+	"headers": {                                          // Additional HTTP headers
+		"x-api-key": "{{connection.apiKey}}"   // Authorizes user by API key, provided by user during the connection creation.
+	},
+	"response": {
+		"metadata": {                                     // Adds authorized user details to the connection label.
+			"type": "email",                              // Type of the parameter. Can be "text" or "email".
+			"value": "{{body.email}}"                     // The value in "email" will be displayed in connection's label.
+		},
+		"valid" : "{{!body.error || body.errors}}",
+		"error": {                                        // Error handling
+			"message": "[{{statusCode}}] {{ifempty(body.error.message,body.errors)}}"  // On error, returns error message as "[statusCode] error text".
+		}
+	},
+	"log": {
+		"sanitize": [                                     // Excludes sensitive parameters from logs.
+			"request.headers.x-api-key"               // Omit HTTP header "Authorization".
+		]
+	}
+}
