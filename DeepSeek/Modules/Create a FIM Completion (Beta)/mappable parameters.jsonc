@@ -1,0 +1,122 @@
+[
+  {
+    "type": "select",
+    "name": "model",
+    "label": "Model",
+    "required": true,
+    "help": "ID of the model to use.",
+    "options": [
+      {
+        "value": "deepseek-chat",
+        "label": "DeepSeek Chat"
+      }
+    ]
+  },
+  {
+    "type": "text",
+    "default": "Once upon a time,",
+    "required": true,
+    "label": "Prompt",
+    "name": "prompt",
+    "help": "The prompt to generate completions for."
+  },
+  {
+    "type": "boolean",
+    "advanced": true,
+    "label": "Echo",
+    "name": "echo",
+    "default": false,
+    "required": true,
+    "help": "Echo back the prompt in addition to the completion"
+  },
+  {
+    "type": "number",
+    "advanced": true,
+    "default": 0,
+    "help": "Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.",
+    "name": "frequency_penalty",
+    "label": "Frequency Penalty"
+  },
+  {
+    "type": "integer",
+    "name": "logprobs",
+    "label": "Logprobs",
+    "advanced": true,
+    "help": "Include the log probabilities on the logprobs most likely output tokens, as well the chosen tokens. For example, if logprobs is 20, the API will return a list of the 20 most likely tokens. The API will always return the logprob of the sampled token, so there may be up to logprobs+1 elements in the response."
+  },
+  {
+    "type": "integer",
+    "label": "Max Tokens",
+    "name": "max_tokens",
+    "help": "The maximum number of tokens that can be generated in the completion."
+  },
+  {
+    "label": "Presence Penalty",
+    "type": "number",
+    "name": "presence_penalty",
+    "advanced": true,
+    "help": "Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.",
+    "default": 0
+  },
+  {
+    "name": "stop",
+    "label": "Stop",
+    "type": "array",
+    "advanced": true,
+    "help": "Up to 16 sequences where the API will stop generating further tokens.",
+    "spec": [
+      {
+        "type": "text",
+        "label": "Item"
+      }
+    ]
+  },
+  {
+    "name": "stream",
+    "label": "Stream",
+    "type": "boolean",
+    "default": false,
+    "advanced": true,
+    "required": true,
+    "help": "If set, partial message deltas will be sent. Tokens will be sent as data-only server-sent events (SSE) as they become available, with the stream terminated by a data: [DONE] message.",
+    "nested": [
+      {
+        "name": "stream_options",
+        "type": "collection",
+        "label": "Stream Options",
+        "help": "Options for streaming response.",
+        "spec": [
+          {
+            "name": "include_usage",
+            "type": "boolean",
+            "default": false,
+            "required": true,
+            "label": "Include Usage?"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "suffix",
+    "label": "Suffix",
+    "help": "The suffix that comes after a completion of inserted text.",
+    "required": true,
+    "type": "text"
+  },
+  {
+    "name": "temperature",
+    "label": "Temperature",
+    "type": "number",
+    "default": 1,
+    "help": "What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic."
+  },
+  {
+    "name": "top_p",
+    "label": "Top P",
+    "type": "number",
+    "default": 1,
+    "advanced": true,
+    "help": "An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered."
+  }
+]

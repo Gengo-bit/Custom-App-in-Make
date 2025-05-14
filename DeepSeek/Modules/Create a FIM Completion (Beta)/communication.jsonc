@@ -1,0 +1,23 @@
+{
+	"url": "/completions",      // set base_url="https://api.deepseek.com/beta" to use this feature.
+
+	"method": "POST",
+	"body": {
+		"model": "{{parameters.model}}",
+		"prompt": "{{parameters.prompt}}",
+		"echo": "{{parameters.echo}}",
+		"frequency_penalty": "{{parameters.frequency_penalty}}",
+		"logprobs": "{{parameters.logprobs}}",
+		"max_tokens": "{{parameters.max_tokens}}",
+		"presence_penalty": "{{parameters.presence_penalty}}",
+		"stop": "{{parameters.stop}}",
+		"stream": "{{parameters.stream}}",
+		"suffix": "{{parameters.suffix}}",
+		"temperature": "{{parameters.temperature}}",
+		"top_p": "{{paramters.top_p}}"
+	},
+
+	"response": {
+		"output": "{{body}}"               
+	}
+}

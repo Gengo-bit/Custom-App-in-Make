@@ -1,0 +1,64 @@
+[
+	{
+		"name": "model",
+		"type": "select",
+		"label": "Model",
+		"required": true
+	},
+	{
+		"name": "prompt",
+		"type": "text",
+		"label": "Prompt",
+		"required": true
+	},
+	{
+		"name": "echo",
+		"type": "boolean",
+		"label": "Echo"
+	},
+	{
+		"type": "number",
+		"name": "frequency_penalty",
+		"label": "Frequency Penalty"
+	},
+	{
+		"type": "integer",
+		"name": "logprobs",
+		"label": "Logprobs"
+	},
+	{
+		"type": "integer",
+		"name": "max_tokens",
+		"label": "Max Tokens"
+	},
+	{
+		"type": "number",
+		"label": "Presence Penalty",
+		"name": "presence_penalty"
+	},
+	{
+		"name": "stop",
+		"label": "Stop",
+		"type": "array"
+	},
+	{
+		"name": "stream",
+		"label": "Stream",
+		"type": "boolean"
+	},
+	{
+		"name": "suffix",
+		"label": "Suffix",
+		"type": "text"
+	},
+	{
+		"name": "temperature",
+		"label": "Temperature",
+		"type": "number"
+	},
+	{
+		"name": "top_p",
+		"label": "Top P",
+		"type": "number"
+	}
+]
