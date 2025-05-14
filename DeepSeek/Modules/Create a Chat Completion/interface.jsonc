@@ -1,0 +1,74 @@
+[
+	{
+		"name": "model",
+		"type": "select",
+		"label": "Model",
+		"required": true
+	},
+	{
+		"name": "messages",
+		"type": "array",
+		"label": "Messages",
+		"required": true
+	},
+	{
+		"name": "temperature",
+		"type": "number",
+		"label": "Temperature"
+	},
+	{
+		"name": "response_format",
+		"type": "collection",
+		"label": "Response Format"
+	},
+	{
+		"name": "max_tokens",
+		"type": "integer",
+		"label": "Max Tokens"
+	},
+	{
+		"name": "frequency_penalty",
+		"type": "number",
+		"label": "Frequency Penalty"
+	},
+	{
+		"name": "presence_penalty",
+		"type": "number",
+		"label": "Presence Penalty"
+	},
+	{
+		"name": "stop",
+		"label": "Stop",
+		"type": "array"
+	},
+	{
+		"name": "stream",
+		"type": "boolean",
+		"label": "Stream"
+	},
+	{
+		"name": "top_p",
+		"type": "number",
+		"label": "Top P"
+	},
+	{
+		"name": "tools",
+		"label": "Tools",
+		"type": "array"
+	},
+	{
+		"type": "select",
+		"label": "Tool Choice",
+		"name": "tool_choice"
+	},
+	{
+		"type": "boolean",
+		"name": "logprobs",
+		"label": "Logprobs"
+	},
+	{
+		"type": "integer",
+		"name": "top_logprobs",
+		"label": "Top Logprobs"
+	}
+]
