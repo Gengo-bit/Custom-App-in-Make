@@ -1,0 +1,26 @@
+{
+    "url": "/chat/completions",  
+    "method": "POST",
+    "headers": {}, 
+
+    "body": {
+      "model": "{{parameters.model}}",
+      "messages": "{{parameters.messages}}",
+      "temperature": "{{parameters.temperature}}",
+      "response_format": "{{parameters.response_format}}",
+      "max_tokens": "{{parameters.max_tokens}}",
+      "frequency_penalty": "{{parameters.frequency_penalty}}",
+      "presence_penalty": "{{parameters.presence_penalty}}",
+      "stop": "{{parameters.stop}}",
+      "stream": "{{parameters.stream}}",
+      "top_p": "{{parameters.top_p}}",
+      "tools": "{{parameters.tools}}",
+      "tool_choice": "{{parameters.tool_choice}}",
+      "logprobs": "{{parameters.logprobs}}",
+      "top_logprobs": "{{parameters.top_logprobs}}"
+    },
+
+    "response": {
+      "output": "{{body}}" 
+    }
+}

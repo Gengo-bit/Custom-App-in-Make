@@ -1,0 +1,10 @@
+{
+	"url": "/user/balance",     
+	"method": "GET",
+	"headers": {},   
+	"qs": {},    
+
+	"response": {
+		"output": "{{body}}" 
+	}
+}

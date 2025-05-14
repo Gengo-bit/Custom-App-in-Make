@@ -1,0 +1,10 @@
+[
+    {
+      "name": "apiKey",
+      "type": "password",
+      "label": "API Key",
+      "required": true,
+      "editable": true,
+      "help": "Enter your DeepSeek API key. Get it from https://platform.deepseek.com/api_keys."
+    }
+]

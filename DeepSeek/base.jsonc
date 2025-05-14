@@ -1,0 +1,16 @@
+{
+  "baseUrl": "https://api.deepseek.com",
+  "headers": {
+    "Authorization": "Bearer {{connection.apiKey}}",
+    "Content-Type": "application/json",
+    "Accept": "application/json"
+  },
+  "response": {
+    "error": {
+      "message": "[{{statusCode}}] {{body.error?.message || body.error || 'API Error'}}"
+    }
+  },
+  "log": {
+    "sanitize": ["request.headers.authorization"]
+  }
+}
