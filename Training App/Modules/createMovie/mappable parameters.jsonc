@@ -2,10 +2,9 @@
 	// Defines "id" as mandatory module input parameter.
 	{
 		"name": "name",        // Makes value accesible via "{{parameters.id}}".
-		"type": "select",  // Sets the type to unsigned integer.
+		"type": "text",  // Sets the type to unsigned integer.
 		"label": "Movie Name",  // Sets the user friendly label visible in the module.
-		"required": true,     // Sets the parameter as mandatory.
-		"options": "rpc://listMovies"
+		"required": true     // Sets the parameter as mandatory.
 	},
 	{
 		"name": "genres",

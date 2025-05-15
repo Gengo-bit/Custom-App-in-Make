@@ -1,0 +1,12 @@
+[
+    {
+        "name": "order",
+        "type": "text",
+        "label": "Order"
+    },
+    {
+        "name": "sort",
+        "type": "text",
+        "label": "Sort"
+    }
+]
