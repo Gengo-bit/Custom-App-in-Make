@@ -1,0 +1,88 @@
+[
+	// Defines "id" as mandatory module input parameter.
+	{
+		"name": "name",        // Makes value accesible via "{{parameters.id}}".
+		"type": "text",  // Sets the type to unsigned integer.
+		"label": "Movie Name",  // Sets the user friendly label visible in the module.
+		"required": true     // Sets the parameter as mandatory.
+	},
+	{
+		"name": "genres",
+		"spec": {
+			"type": "integer",
+			"label": "Genre"
+		},
+		"type": "array",
+		"label": "Genres"
+	},
+	{
+		"name": "directorId",        // Makes value accesible via "{{parameters.id}}".
+		"type": "text",  // Sets the type to unsigned integer.
+		"label": "Director ID",  // Sets the user friendly label visible in the module.
+		"required": true     // Sets the parameter as mandatory.
+	},
+	{
+		"name": "releaseDate",        // Makes value accesible via "{{parameters.id}}".
+		"type": "text",  // Sets the type to unsigned integer.
+		"label": "Release Date",  // Sets the user friendly label visible in the module.
+		"time": false,
+		"required": true     // Sets the parameter as mandatory.
+	},
+	{
+		"name": "length",        // Makes value accesible via "{{parameters.id}}".
+		"type": "number",  // Sets the type to unsigned integer.
+		"label": "Length",  // Sets the user friendly label visible in the module.
+		"required": true     // Sets the parameter as mandatory.
+	},
+		{
+		"name": "topCast",
+		"spec": [
+			{
+				"name": "role",
+				"type": "text",
+				"label": "Role"
+			},
+			{
+				"name": "castId",
+				"type": "text",
+				"label": "Cast ID"
+			}
+		],
+		"type": "array",
+		"label": "Casting"
+	},
+	{
+		"name": "boxOffice",
+		"spec": [
+			{
+				"name": "budget",
+				"type": "number",
+				"label": "Budget"
+			},
+			{
+				"name": "grossProfit",
+				"type": "number",
+				"label": "Gross Profit"
+			}
+		],
+		"type": "collection",
+		"label": "Box Office"
+	},
+	{
+		"name": "premieres",
+		"spec": [
+			{
+				"name": "czechPremiere",
+				"type": "date",
+				"label": "Czech Premiere"
+			},
+			{
+				"name": "originalPremiere",
+				"type": "date",
+				"label": "Original Premiere"
+			}
+		],
+		"type": "collection",
+		"label": "Premieres"
+	}
+]

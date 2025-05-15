@@ -1,0 +1,29 @@
+[
+		{
+		"name": "greeting",
+		"type": "select",
+		"label": "Select a greeting",
+		"default": "John Doe",
+		"options": [
+			{
+				"label": "Hi",
+				"value": "Hi"
+			},
+			{
+				"label": "Hello",
+				"value": "Hello"
+			},
+			{
+				"label": "Howdy",
+				"value": "Howdy"
+			}
+		]
+	},
+	    {
+		"name": "name",
+		"type": "text",
+		"label": "Name",
+		"help" : "Enter the name of the person to greet. For example: 'John Doe'",
+		"required": true
+	}
+]
