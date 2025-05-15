@@ -1,0 +1,21 @@
+{
+	"url": "/movies",
+	"method": "GET",
+	"qs": {
+		"order": "{{parameters.order}}",
+		"sort": "{{parameters.sort}}"
+	},
+	"response": {
+		"limit": 15,
+		"iterate": "{{body.result}}",
+		"output": {
+			"label": "{{item.name}}",
+			"value": "{{item.id}}"
+		}
+	},
+	"pagination": {
+		"qs": {
+			"page": "{{pagination.page}}"
+		}
+	}
+}

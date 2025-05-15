@@ -2,24 +2,25 @@
 	// Defines "id" as mandatory module input parameter.
 	{
 		"name": "name",        // Makes value accesible via "{{parameters.id}}".
-		"type": "text",  // Sets the type to unsigned integer.
+		"type": "select",  // Sets the type to unsigned integer.
 		"label": "Movie Name",  // Sets the user friendly label visible in the module.
-		"required": true     // Sets the parameter as mandatory.
+		"required": true,     // Sets the parameter as mandatory.
+		"options": "rpc://listMovies"
 	},
 	{
 		"name": "genres",
-		"spec": {
-			"type": "integer",
-			"label": "Genre"
-		},
-		"type": "array",
-		"label": "Genres"
+		"type": "select",
+		"label": "Genres",
+		"options": "rpc://rpcGenre",
+		"multiple": true,
+		"required": true
 	},
 	{
 		"name": "directorId",        // Makes value accesible via "{{parameters.id}}".
-		"type": "text",  // Sets the type to unsigned integer.
+		"type": "select",  // Sets the type to unsigned integer.
 		"label": "Director ID",  // Sets the user friendly label visible in the module.
-		"required": true     // Sets the parameter as mandatory.
+		"required": true,     // Sets the parameter as mandatory.
+		"options":"rpc://rpcPeople"
 	},
 	{
 		"name": "releaseDate",        // Makes value accesible via "{{parameters.id}}".
@@ -44,7 +45,8 @@
 			},
 			{
 				"name": "castId",
-				"type": "text",
+				"type": "select",
+				"options":"rpc://rpcPeople",
 				"label": "Cast ID"
 			}
 		],
