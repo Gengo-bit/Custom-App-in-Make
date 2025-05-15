@@ -1,0 +1,14 @@
+{
+  "url": "/people",
+  "method": "GET",
+  "pagination": {
+    "qs": {
+      "offset": "{{(pagination.page - 1) * 5}}"
+    }
+  },
+  "response": {
+    "iterate": "{{body.result}}",
+    "output": "{{item}}",
+    "limit": "{{parameters.limit}}"
+  }
+}
