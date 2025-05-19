@@ -7,7 +7,7 @@
   },
   "response": {
     "error": {
-      "message": "[{{statusCode}}] {{body.error?.message || body.error || 'API Error'}}"
+      "message": "[{{statusCode}}] {{body.error.message}}"
     }
   },
   "log": {

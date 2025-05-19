@@ -1,7 +1,6 @@
 {
     "url": "/chat/completions",  
     "method": "POST",
-    "headers": {}, 
 
     "body": {
       "model": "{{parameters.model}}",

@@ -1,0 +1,27 @@
+[
+  {
+    "label": "Chat",
+    "modules": [
+      "createChatCompletion"
+    ]
+  },
+  {
+    "label": "Completions",
+    "modules": [
+      "createFIMCompletion"
+    ]
+  },
+  {
+    "label": "Models",
+    "modules": [
+      "getList"
+    ]
+  },
+  {
+    "label": "Others",
+    "modules": [
+      "getUserBalance",
+      "universalModule"
+    ]
+  }
+]

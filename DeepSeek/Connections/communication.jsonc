@@ -1,11 +1,11 @@
 {
-    "url": "https://api.deepseek.com/v1/models", 
+    "url": "https://api.deepseek.com/v1/models",
     "headers": {
       "Authorization": "Bearer {{parameters.apiKey}}"
     },
     "response": {
       "error": {
-        "message": "[{{statusCode}}] {{body.error || 'Invalid API Key'}}"
+        "message": "[{{statusCode}}] {{body.error}}"
       }
     },
     "log": {

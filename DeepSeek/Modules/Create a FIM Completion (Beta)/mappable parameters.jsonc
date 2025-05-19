@@ -33,8 +33,9 @@
     "type": "number",
     "advanced": true,
     "default": 0,
-    "help": "Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.",
+    "help": "Number between -2.0 and 2.0. \nPositive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.",
     "name": "frequency_penalty",
+    "validate": {"min":-2.0,"max": 2.0},
     "label": "Frequency Penalty"
   },
   {
@@ -42,7 +43,8 @@
     "name": "logprobs",
     "label": "Logprobs",
     "advanced": true,
-    "help": "Include the log probabilities on the logprobs most likely output tokens, as well the chosen tokens. For example, if logprobs is 20, the API will return a list of the 20 most likely tokens. The API will always return the logprob of the sampled token, so there may be up to logprobs+1 elements in the response."
+    "validate": {"max": 20},
+    "help": "Include the log probabilities on the logprobs most likely output tokens, as well the chosen tokens. \nFor example, if logprobs is 20, the API will return a list of the 20 most likely tokens. The API will always return the logprob of the sampled token, so there may be up to logprobs+1 elements in the response."
   },
   {
     "type": "integer",
@@ -55,7 +57,8 @@
     "type": "number",
     "name": "presence_penalty",
     "advanced": true,
-    "help": "Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.",
+    "help": "Number between -2.0 and 2.0. \nPositive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.",
+    "validate": {"min":-2.0,"max": 2.0},
     "default": 0
   },
   {
@@ -78,7 +81,7 @@
     "default": false,
     "advanced": true,
     "required": true,
-    "help": "If set, partial message deltas will be sent. Tokens will be sent as data-only server-sent events (SSE) as they become available, with the stream terminated by a data: [DONE] message.",
+    "help": "If set, partial message deltas will be sent. \nTokens will be sent as data-only server-sent events (SSE) as they become available, with the stream terminated by a data: [DONE] message.",
     "nested": [
       {
         "name": "stream_options",
@@ -101,7 +104,7 @@
     "name": "suffix",
     "label": "Suffix",
     "help": "The suffix that comes after a completion of inserted text.",
-    "required": true,
+    "advanced": true,
     "type": "text"
   },
   {
@@ -109,7 +112,8 @@
     "label": "Temperature",
     "type": "number",
     "default": 1,
-    "help": "What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic."
+    "validate": {"max": 2},
+    "help": "What sampling temperature to use, between 0 and 2. \nHigher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic."
   },
   {
     "name": "top_p",
@@ -117,6 +121,7 @@
     "type": "number",
     "default": 1,
     "advanced": true,
-    "help": "An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered."
+    "validate": {"max":1},
+    "help": "An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. \nSo 0.1 means only the tokens comprising the top 10% probability mass are considered."
   }
 ]

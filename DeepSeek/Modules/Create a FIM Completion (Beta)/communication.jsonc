@@ -1,5 +1,5 @@
 {
-	"url": "/completions",      // set base_url="https://api.deepseek.com/beta" to use this feature.
+	"url": "/beta/completions",
 
 	"method": "POST",
 	"body": {
