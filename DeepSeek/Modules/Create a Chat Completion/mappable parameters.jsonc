@@ -6,16 +6,7 @@
     "required": true,
     "default": "deepseek-chat",
     "help": "DeepSeek Model",
-    "options": [
-      {
-        "label": "DeepSeek V3",
-        "value": "deepseek-chat"
-      },
-      {
-        "label": "DeepSeek R1",
-        "value": "deepseek-reasoner"
-      }
-    ]
+    "options": "rpc://getModels"
   },
   {
     "name": "messages",
